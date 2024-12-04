@@ -5,7 +5,7 @@
 namespace AOC2024 {
 
 int64_t solveDay1Part1() {
-    std::vector<std::string> list = utils::readFileLines("..\\Resources\\day1.txt");
+    std::vector<std::string> list = utils::readFileLines("..\\src\\Resources\\day1.txt");
     long long result = 0;
     std::vector<int> left;
     std::vector<int> right;
@@ -24,7 +24,7 @@ int64_t solveDay1Part1() {
 }
 
 int64_t solveDay1Part2() {
-    std::vector<std::string> list = utils::readFileLines("..\\Resources\\day1.txt");
+    std::vector<std::string> list = utils::readFileLines("..\\src\\Resources\\day1.txt");
     long long result = 0;
     std::vector<int> left;
     std::unordered_map<int, int> map;

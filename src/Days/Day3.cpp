@@ -7,7 +7,7 @@
 namespace AOC2024 {
 
 int64_t solveDay3Part1() {
-    std::vector<std::string> list = utils::readFileLines("..\\Resources\\day3.txt");
+    std::vector<std::string> list = utils::readFileLines("..\\src\\Resources\\day3.txt");
     int64_t result = 0;
     std::regex re("mul\\([1-9][0-9]{0,2},[1-9][0-9]{0,2}\\)");
     for (std::string& s: list) {
@@ -38,7 +38,7 @@ int64_t solveDay3Part1() {
 }
 
 int64_t solveDay3Part2() {
-    std::vector<std::string> list = utils::readFileLines("..\\Resources\\day3.txt");
+    std::vector<std::string> list = utils::readFileLines("..\\src\\Resources\\day3.txt");
     int64_t result = 0;
     std::regex re("mul\\([1-9][0-9]{0,2},[1-9][0-9]{0,2}\\)|do\\(\\)|don't\\(\\)");
     bool enabled = true;

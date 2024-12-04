@@ -5,7 +5,7 @@
 namespace AOC2024 {
 
 int64_t solveDay2Part1() {
-    std::vector<std::string> list = utils::readFileLines("..\\Resources\\day2.txt");
+    std::vector<std::string> list = utils::readFileLines("..\\src\\Resources\\day2.txt");
     int64_t result = 0;
     for (std::string& s: list) {
         std::vector<std::string> nums = utils::stringSplit(s, " ");
@@ -35,7 +35,7 @@ int64_t solveDay2Part1() {
 }
 
 int64_t solveDay2Part2() {
-    std::vector<std::string> list = utils::readFileLines("..\\Resources\\day2.txt");
+    std::vector<std::string> list = utils::readFileLines("..\\src\\Resources\\day2.txt");
     int64_t result = 0;
     for (std::string& s: list) {
         std::vector<std::string> read = utils::stringSplit(s, " ");

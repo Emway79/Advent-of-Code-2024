@@ -1,5 +1,5 @@
-#ifndef EULER_PROJECT_UTILS_HPP
-#define EULER_PROJECT_UTILS_HPP
+#ifndef UTILS_HPP
+#define UTILS_HPP
 
 
 #include <vector>
@@ -52,4 +52,4 @@ namespace utils {
 #include "utils.tpp"
 
 
-#endif //EULER_PROJECT_UTILS_HPP
+#endif //UTILS_HPP

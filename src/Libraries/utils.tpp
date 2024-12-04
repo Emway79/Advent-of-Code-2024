@@ -71,7 +71,6 @@ bool utils::isPrime(integral number) {
     return true;
 }
 
-// TODO negative numbers are not supported
 template<std::integral integral>
 std::vector<integral> utils::numToDigits(integral number) {
     int size;
