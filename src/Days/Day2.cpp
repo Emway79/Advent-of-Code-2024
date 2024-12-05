@@ -1,14 +1,15 @@
 #include "Day.hpp"
 #include "../Libraries/utils.hpp"
-#include <unordered_map>
+
 
 namespace AOC2024 {
 
+
 int64_t solveDay2Part1() {
-    std::vector<std::string> list = utils::readFileLines("..\\src\\Resources\\day2.txt");
+    std::vector<std::string> lines = utils::readFileLines("..\\src\\Resources\\day2.txt");
     int64_t result = 0;
-    for (std::string& s: list) {
-        std::vector<std::string> nums = utils::stringSplit(s, " ");
+    for (std::string& line: lines) {
+        std::vector<std::string> nums = utils::stringSplit(line, " ");
         int prev = std::stoi(nums[0]);
         bool up = true;
         bool down = true;
@@ -35,10 +36,10 @@ int64_t solveDay2Part1() {
 }
 
 int64_t solveDay2Part2() {
-    std::vector<std::string> list = utils::readFileLines("..\\src\\Resources\\day2.txt");
+    std::vector<std::string> lines = utils::readFileLines("..\\src\\Resources\\day2.txt");
     int64_t result = 0;
-    for (std::string& s: list) {
-        std::vector<std::string> read = utils::stringSplit(s, " ");
+    for (std::string& line: lines) {
+        std::vector<std::string> read = utils::stringSplit(line, " ");
         bool found = false;
         for (int r = 0; r < read.size(); ++r) {
             std::vector<std::string> nums;
@@ -78,5 +79,6 @@ int64_t solveDay2Part2() {
 
     return result;
 }
+
 
 }
