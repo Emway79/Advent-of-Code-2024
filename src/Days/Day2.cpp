@@ -40,7 +40,6 @@ int64_t solveDay2Part2() {
     int64_t result = 0;
     for (std::string& line: lines) {
         std::vector<std::string> read = utils::stringSplit(line, " ");
-        bool found = false;
         for (int r = 0; r < read.size(); ++r) {
             std::vector<std::string> nums;
             for (int i = 0; i < read.size(); ++ i) {
@@ -68,12 +67,8 @@ int64_t solveDay2Part2() {
             }
             if (up || down) {
                 result++;
-                found = true;
                 break;
             }
-        }
-        if (found) {
-            continue;
         }
     }
 
