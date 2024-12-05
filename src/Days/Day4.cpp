@@ -1,9 +1,9 @@
-#include <iostream>
-
 #include "Day.hpp"
 #include "../Libraries/utils.hpp"
 
+
 namespace AOC2024 {
+
 
 int64_t solveDay4Part1() {
     const std::vector<std::string> grid = utils::readFileLines("..\\src\\Resources\\day4.txt");
@@ -65,5 +65,6 @@ int64_t solveDay4Part2() {
 
     return result;
 }
+
 
 }

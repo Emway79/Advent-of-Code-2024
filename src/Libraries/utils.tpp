@@ -1,7 +1,11 @@
+#pragma once
+
+
 #include <cmath>
 #include <vector>
 #include <algorithm>
 #include <stdexcept>
+
 
 template <std::integral integral>
 std::vector<integral> utils::getDivisors(integral number) {

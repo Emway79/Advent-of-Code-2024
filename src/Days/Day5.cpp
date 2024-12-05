@@ -1,24 +1,25 @@
-#include <iostream>
 #include <unordered_map>
 
 #include "Day.hpp"
 #include "../Libraries/utils.hpp"
 
+
 namespace AOC2024 {
 
+
 int64_t solveDay5Part1() {
-    std::vector<std::string> list = utils::readFileLines("..\\src\\Resources\\day5.txt");
+    std::vector<std::string> lines = utils::readFileLines("..\\src\\Resources\\day5.txt");
     int64_t result = 0;
     std::unordered_map<int64_t, std::vector<int64_t>> pages;
     bool ordering = true;
 
-    for (std::string &s : list) {
-        if (s.empty()) {
+    for (std::string &line : lines) {
+        if (line.empty()) {
             ordering = false;
             continue;
         }
         if (ordering) {
-            std::vector<std::string> nums = utils::stringSplit(s, "|");
+            std::vector<std::string> nums = utils::stringSplit(line, "|");
             int64_t page = std::stoll(nums[0]);
             if (!pages.contains(page)) {
                 std::vector<int64_t> after;
@@ -26,7 +27,7 @@ int64_t solveDay5Part1() {
             }
             pages[page].push_back(std::stoll(nums[1]));
         } else {
-            std::vector<std::string> nums = utils::stringSplit(s, ",");
+            std::vector<std::string> nums = utils::stringSplit(line, ",");
             std::vector<int64_t> order;
             for (std::string& n : nums) {
                 order.push_back(std::stoll(n));
@@ -55,18 +56,18 @@ int64_t solveDay5Part1() {
 }
 
 int64_t solveDay5Part2() {
-    std::vector<std::string> list = utils::readFileLines("..\\src\\Resources\\day5.txt");
+    std::vector<std::string> lines = utils::readFileLines("..\\src\\Resources\\day5.txt");
     int64_t result = 0;
     std::unordered_map<int64_t, std::vector<int64_t>> pages;
     bool ordering = true;
 
-    for (std::string &s : list) {
-        if (s.empty()) {
+    for (std::string &line : lines) {
+        if (line.empty()) {
             ordering = false;
             continue;
         }
         if (ordering) {
-            std::vector<std::string> nums = utils::stringSplit(s, "|");
+            std::vector<std::string> nums = utils::stringSplit(line, "|");
             int64_t page = std::stoll(nums[0]);
             if (!pages.contains(page)) {
                 std::vector<int64_t> after;
@@ -74,7 +75,7 @@ int64_t solveDay5Part2() {
             }
             pages[page].push_back(std::stoll(nums[1]));
         } else {
-            std::vector<std::string> nums = utils::stringSplit(s, ",");
+            std::vector<std::string> nums = utils::stringSplit(line, ",");
             std::vector<int64_t> order;
             for (std::string& n : nums) {
                 order.push_back(std::stoll(n));
@@ -109,5 +110,6 @@ int64_t solveDay5Part2() {
 
     return result;
 }
+
 
 }

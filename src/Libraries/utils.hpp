@@ -8,6 +8,7 @@
 
 namespace utils {
 
+
     std::vector<std::string> stringSplit(const std::string& string, const std::string& delimiter);
 
     void stringStrip(std::string& string, const std::string& strip);
@@ -45,6 +46,8 @@ namespace utils {
     std::vector<std::string> readFileLines(const std::string& pathName);
 
     std::string readFile(const std::string& pathName);
+
+
 }
 
 

@@ -7,6 +7,7 @@
 
 namespace AOC2024 {
 
+
 int64_t solveDay1Part1();
 int64_t solveDay1Part2();
 
@@ -81,6 +82,7 @@ int64_t solveDay24Part2();
 
 int64_t solveDay25Part1();
 int64_t solveDay25Part2();
+
 
 }
 
