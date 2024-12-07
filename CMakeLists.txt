@@ -16,6 +16,7 @@ add_executable(AOC2024
         src/Days/Day4.cpp
         src/Days/Day5.cpp
         src/Days/Day6.cpp
+        src/Days/Day7.cpp
 
         #Utilities
         src/Libraries/utils.tpp
