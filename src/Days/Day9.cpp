@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "Day.hpp"
 #include "../Libraries/utils.hpp"
 
@@ -94,18 +92,16 @@ int64_t solveDay9Part2() {
                 if (empt.size == r.size) {
                     empt.id = r.id;
                     empt.size = r.size;
-                    r.id = -1;
-                    blocks[empty] = empt;
-                    blocks[right] = r;
                 } else {
                     Block add {r.size, r.id};
                     empt.size -= r.size;
-                    r.id = -1;
-                    blocks[empty] = empt;
-                    blocks[right] = r;
                     blocks.insert(std::next(blocks.begin(), empty), add);
                     ++right;
+                    ++empty;
                 }
+                r.id = -1;
+                blocks[empty] = empt;
+                blocks[right] = r;
                 break;
             }
         }
