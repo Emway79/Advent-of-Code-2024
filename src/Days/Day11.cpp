@@ -1,20 +1,17 @@
-#include <iostream>
 #include <unordered_map>
 
 #include "Day.hpp"
 #include "../Libraries/utils.hpp"
 
-using namespace std;
 
 namespace AOC2024 {
 
 
 int64_t solveDay11Part1() {
     std::vector<std::string> lines = utils::readFileLines("..\\src\\Resources\\day11.txt");
-    string& line = lines[0];
-    vector<string> ss = utils::stringSplit(line, " ");
-    unordered_map<int64_t, int64_t> nums;
-    for (string& s : ss) {
+    std::vector<std::string> splits = utils::stringSplit(lines[0], " ");
+    std::unordered_map<int64_t, int64_t> nums;
+    for (std::string& s : splits) {
         int64_t num = stoll(s);
         if (!nums.contains(num)) {
             nums[num] = 1;
@@ -24,9 +21,9 @@ int64_t solveDay11Part1() {
     }
 
     for (int i = 0; i < 25; ++i) {
-        unordered_map<int64_t, int64_t> newNums;
+        std::unordered_map<int64_t, int64_t> newNums;
         for (const auto &[key, amount]: nums) {
-            string digits = std::to_string(key);
+            std::string digits = std::to_string(key);
             if (key == 0) {
                 if (!newNums.contains(1)) {
                     newNums[1] = amount;
@@ -69,10 +66,9 @@ int64_t solveDay11Part1() {
 
 int64_t solveDay11Part2() {
     std::vector<std::string> lines = utils::readFileLines("..\\src\\Resources\\day11.txt");
-    string& line = lines[0];
-    vector<string> ss = utils::stringSplit(line, " ");
-    unordered_map<int64_t, int64_t> nums;
-    for (string& s : ss) {
+    std::vector<std::string> splits = utils::stringSplit(lines[0], " ");
+    std::unordered_map<int64_t, int64_t> nums;
+    for (std::string& s : splits) {
         int64_t num = stoll(s);
         if (!nums.contains(num)) {
             nums[num] = 1;
@@ -82,9 +78,9 @@ int64_t solveDay11Part2() {
     }
 
     for (int i = 0; i < 75; ++i) {
-        unordered_map<int64_t, int64_t> newNums;
+        std::unordered_map<int64_t, int64_t> newNums;
         for (const auto &[key, amount]: nums) {
-            string digits = std::to_string(key);
+            std::string digits = std::to_string(key);
             if (key == 0) {
                 if (!newNums.contains(1)) {
                     newNums[1] = amount;
