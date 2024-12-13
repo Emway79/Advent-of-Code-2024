@@ -21,11 +21,12 @@ add_executable(AOC2024
         src/Days/Day9.cpp
         src/Days/Day10.cpp
         src/Days/Day11.cpp
+        src/Days/Day12.cpp
+        src/Days/Day13.cpp
 
         #Utilities
         src/Libraries/utils.tpp
         src/Libraries/utils.cpp
         src/Libraries/utils.hpp
         src/Libraries/definitions.hpp
-        src/Days/Day12.cpp
 )
