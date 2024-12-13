@@ -3,6 +3,7 @@
 #include <cmath>
 #include <fstream>
 #include <sstream>
+#include <regex>
 
 #include "utils.hpp"
 
@@ -19,6 +20,16 @@ std::vector<std::string> utils::stringSplit(const std::string& string, const std
         s.erase(0, position + delimiter.length());
     }
     result.push_back(s.substr(0, std::string::npos));
+
+    return result;
+}
+
+std::vector<std::string> utils::applyRegex(const std::string& string, const std::regex& re) {
+    std::sregex_iterator iterator = std::sregex_iterator(string.begin(), string.end(), re);
+    std::vector<std::string> result;
+    for (std::sregex_iterator& i = iterator; i != std::sregex_iterator(); ++i) {
+        result.push_back(i->str());
+    }
 
     return result;
 }

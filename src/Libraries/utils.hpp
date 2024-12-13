@@ -4,6 +4,7 @@
 
 #include <vector>
 #include <string>
+#include <regex>
 
 
 namespace utils {
@@ -12,6 +13,8 @@ namespace utils {
     std::vector<std::string> stringSplit(const std::string& string, const std::string& delimiter);
 
     void stringStrip(std::string& string, const std::string& strip);
+
+    std::vector<std::string> applyRegex(const std::string& string, const std::regex& re);
 
     template <std::integral integral>
     std::vector<integral> getDivisors(integral number);
