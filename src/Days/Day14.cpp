@@ -1,11 +1,7 @@
-#include <iostream>
-
 #include "Day.hpp"
 #include "../Libraries/utils.hpp"
 #include "../Libraries/definitions.hpp"
 
-
-using namespace std;
 
 struct Robot {
     int x;
@@ -28,8 +24,8 @@ int64_t solveDay14Part1() {
     std::regex re("[-]?\\d+");
     for (std::string& line : lines) {
         std::vector<int> nums;
-        for (string& s: utils::applyRegex(line, re)) {
-            nums.push_back(stoi(s));
+        for (std::string& s: utils::applyRegex(line, re)) {
+            nums.push_back(std::stoi(s));
         }
 
         robots.push_back({nums[0], nums[1], nums[2], nums[3]});
@@ -87,8 +83,8 @@ int64_t solveDay14Part2() {
     std::regex re("[-]?\\d+");
     for (std::string& line : lines) {
         std::vector<int> nums;
-        for (string& s: utils::applyRegex(line, re)) {
-            nums.push_back(stoi(s));
+        for (std::string& s: utils::applyRegex(line, re)) {
+            nums.push_back(std::stoi(s));
         }
 
         robots.push_back({nums[0], nums[1], nums[2], nums[3]});
