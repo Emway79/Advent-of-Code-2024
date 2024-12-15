@@ -105,7 +105,7 @@ int64_t solveDay15Part1() {
 
 int64_t solveDay15Part2() {
     std::vector<std::string> lines = utils::readFileLines("..\\src\\Resources\\day15.txt");
-    std::vector<string> grid;
+    std::vector<std::string> grid;
     std::string moves;
 
     bool warehouse = true;
